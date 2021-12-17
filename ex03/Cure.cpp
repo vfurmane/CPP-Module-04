@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 20:53:20 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/12/16 20:57:46 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/12/17 12:14:22 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,5 @@ Cure	&Cure::operator=(const Cure &rhs)
 
 AMateria	*Cure::clone(void) const
 {
-	return NULL;
+	return new Cure(*this);
 }

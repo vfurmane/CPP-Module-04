@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 15:04:20 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/12/16 20:57:49 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/12/17 12:14:13 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,5 @@ Ice	&Ice::operator=(const Ice &rhs)
 
 AMateria	*Ice::clone(void) const
 {
-	return NULL;
+	return new Ice(*this);
 }
