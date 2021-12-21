@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 15:05:22 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/12/21 14:14:17 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/12/21 14:42:39 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ AMateria::AMateria(const std::string &type) : _type(type)
 
 AMateria	&AMateria::operator=(const AMateria &rhs)
 {
-	this->_type = rhs._type;
+	(void)rhs;
 	return *this;
 }
 
