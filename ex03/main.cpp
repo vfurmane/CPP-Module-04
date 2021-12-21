@@ -6,21 +6,24 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 12:15:03 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/12/18 18:48:20 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/12/21 14:17:15 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Character.hpp"
 #include "Ice.hpp"
 #include "Cure.hpp"
 
 int	main(void)
 {
-	AMateria	*glacon = new Ice();
-	AMateria	*remede = new Cure();
-	AMateria	*neige = glacon->clone();
+	int	*ptr = NULL;
+	delete ptr;
+	Character	*personnage = new Character("Asterix");
 
-	delete neige;
-	delete glacon;
-	delete remede;
+	personnage->equip(new Ice());
+	personnage->use(0, *personnage);
+	// personnage->unequip(0); // -> leaks
+
+	delete personnage;
 	return 0;
 }

@@ -6,15 +6,15 @@
 #    By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/02 12:04:50 by vfurmane          #+#    #+#              #
-#    Updated: 2021/12/16 20:58:08 by vfurmane         ###   ########.fr        #
+#    Updated: 2021/12/21 13:53:54 by vfurmane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= a.out
-SRCS		= main.cpp AMateria.cpp Cure.cpp Ice.cpp
+SRCS		= main.cpp AMateria.cpp Cure.cpp Ice.cpp Character.cpp
 OBJS		= $(SRCS:.cpp=.o)
 CC			= c++
-CFLAGS		= -Wall -Wextra -Werror -std=c++98
+CFLAGS		= -Wall -Wextra -Werror -std=c++98 -g3
 RM			= rm -f
 
 %.o:		%.cpp

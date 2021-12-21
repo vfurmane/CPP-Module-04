@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 20:52:49 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/12/16 20:54:35 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/12/21 11:05:58 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,10 @@ class Cure : public AMateria
 		~Cure(void);
 		Cure(const Cure &obj);
 
-		Cure	&operator=(const Cure &rhs);
+		Cure				&operator=(const Cure &rhs);
 
 		virtual AMateria	*clone(void) const;
+		void				use(ICharacter &target);
 };
 
 #endif

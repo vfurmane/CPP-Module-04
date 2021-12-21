@@ -6,14 +6,16 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 12:15:47 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/12/16 21:00:18 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/12/21 11:13:12 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef AMATERIA_HPP
 # define AMATERIA_HPP
 
+# include <iostream>
 # include <string>
+# include "ICharacter.hpp"
 
 class ICharacter;
 
