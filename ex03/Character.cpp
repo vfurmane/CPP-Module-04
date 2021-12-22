@@ -22,7 +22,7 @@ Character::~Character(void)
 		delete this->_inventory[i];
 }
 
-Character::Character(const Character &obj)
+Character::Character(const Character &obj) : _name(), _inventory()
 {
 	*this = obj;
 }
@@ -37,7 +37,8 @@ Character	&Character::operator=(const Character &rhs)
 	for (int i = 0; i < INVENTORY_SIZE; i++)
 	{
 		delete this->_inventory[i];
-		this->_inventory[i] = rhs._inventory[i];
+		if (rhs._inventory[i] != NULL)
+			this->_inventory[i] = rhs._inventory[i]->clone();
 	}
 	return *this;
 }
@@ -57,14 +58,12 @@ void	Character::equip(AMateria* m)
 	if (i >= INVENTORY_SIZE)
 		return ;
 	this->_inventory[i] = m;
-	std::cout << "Equiped materia " << m->getType() << " at index " << i << std::endl;
 }
 
 void	Character::unequip(int idx)
 {
 	if (idx < 0 || idx >= INVENTORY_SIZE)
 		return ;
-	std::cout << "Unequiped materia " << this->_inventory[idx]->getType() << " at index " << idx << std::endl;
 	this->_inventory[idx] = NULL;
 }
 
