@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 11:43:48 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/12/12 14:47:14 by vfurmane         ###   ########.fr       */
+/*   Updated: 2022/01/21 11:50:47 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ Cat::Cat(const Cat &obj) : Animal(obj)
 {
 	std::cout << "Cat is copied." << std::endl;
 	*this = obj;
-	this->_brain = new Brain(*obj._brain);
 }
 
 Cat	&Cat::operator=(const Cat &rhs)

@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 11:42:45 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/12/14 12:34:33 by vfurmane         ###   ########.fr       */
+/*   Updated: 2022/01/21 11:50:06 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ Dog::Dog(const Dog &obj) : Animal(obj)
 {
 	std::cout << "Dog is copied." << std::endl;
 	*this = obj;
-	this->_brain = new Brain(*obj._brain);
 }
 
 Dog	&Dog::operator=(const Dog &rhs)
