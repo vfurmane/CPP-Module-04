@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 10:07:10 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/12/21 14:17:26 by vfurmane         ###   ########.fr       */
+/*   Updated: 2022/01/21 11:53:07 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,6 @@ void	Character::unequip(int idx)
 
 void	Character::use(int idx, ICharacter& target)
 {
-	if (this->_inventory[idx] != NULL)
+	if (idx >= 0 && idx < INVENTORY_SIZE && this->_inventory[idx] != NULL)
 		this->_inventory[idx]->use(target);
 }
